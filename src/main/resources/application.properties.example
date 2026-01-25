@@ -1,0 +1,15 @@
+# 1. Cấu hình kết nối Database (Thay thông tin phù hợp với máy bạn)
+spring.datasource.url=jdbc:mysql://localhost:3306/hotel_db
+spring.datasource.username=root
+spring.datasource.password=DIEN_MAT_KHAU_CUA_BAN_TAI_DAY
+
+# 2. Cấu hình Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+# 3. Cấu hình Swagger
+springdoc.swagger-ui.path=/swagger-ui.html
+
+# 4. Đổi cổng chạy (tùy chọn, mặc định là 8080)
+server.port=8080
+
