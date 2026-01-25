@@ -59,11 +59,11 @@ Hệ thống tự động tạo tài liệu API dựa trên Swagger. Sau khi ser
 
 ## ⚖️ Các Business Rules quan trọng (Critical Rules)
 Dự án cài đặt các quy tắc nghiệp vụ theo yêu cầu tại Slide 9 & 11:
-BR-003: Không cho phép đặt trùng phòng (Double-booking) trong cùng một khoảng thời gian.
-BR-101: Khách hàng phải từ 18 tuổi trở lên mới được đặt phòng.
-BR-301: Hóa đơn tự động tính 10% thuế VAT và 5% phí dịch vụ.
-BR-008: Mã xác nhận đặt phòng theo định dạng: HTLYYYYMMDD-XXXXX.
+- BR-003: Không cho phép đặt trùng phòng (Double-booking) trong cùng một khoảng thời gian.
+- BR-101: Khách hàng phải từ 18 tuổi trở lên mới được đặt phòng.
+- BR-301: Hóa đơn tự động tính 10% thuế VAT và 5% phí dịch vụ.
+- BR-008: Mã xác nhận đặt phòng theo định dạng: HTLYYYYMMDD-XXXXX.
 
 ## 👥 Nhóm thực hiện
-Mai Phương Anh: Database Developer & Infrastructure (Entity, Repository, JPA Mapping).
-Tào Thanh Hà: Backend Developer & Business Logic (Service Layer, Controller, Exception Handling).
+- Mai Phương Anh: Database Developer & Infrastructure (Entity, Repository, JPA Mapping).
+- Tào Thanh Hà: Backend Developer & Business Logic (Service Layer, Controller, Exception Handling).
