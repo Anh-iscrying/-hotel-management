@@ -45,7 +45,7 @@ Hệ thống tập trung vào các nghiệp vụ cốt lõi (Core Domains):
 spring.datasource.username=root
 spring.datasource.password=dien_mat_khau_cua_ban
 ```
-3. Chạy ứng dụng
+### 3. Chạy ứng dụng
 Trên NetBeans: Chuột phải vào Project -> Run.
 Trên Terminal:
 
