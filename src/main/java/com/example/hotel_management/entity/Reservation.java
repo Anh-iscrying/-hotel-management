@@ -39,5 +39,6 @@ public class Reservation {
 
     private String status; // PENDING, CONFIRMED, CHECKED_IN, CANCELLED
     
+    @Builder.Default
     private LocalDateTime createdAt = LocalDateTime.now();
 }
