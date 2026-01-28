@@ -23,10 +23,20 @@ public class GuestService {
         this.guestRepository = guestRepository;
     }
 
+    // Lấy danh sách: Chỉ lấy những người chưa bị xóa
     public List<GuestDTO> getAllGuests() {
         return guestRepository.findAll().stream()
+                .filter(g -> !g.isDeleted()) // Lọc bỏ khách đã xóa
                 .map(GuestMapper::toDTO)
                 .collect(Collectors.toList());
+    }
+
+    // Xóa mềm: Đổi trạng thái thay vì xóa thật
+    public void deleteGuest(Long id) {
+        Guest guest = guestRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Không tìm thấy khách hàng!"));
+        guest.setDeleted(true);
+        guestRepository.save(guest);
     }
 
     public GuestDTO createGuest(GuestDTO guestDTO) {

@@ -36,4 +36,16 @@ public class ReservationController {
     public ReservationResponseDTO getById(@PathVariable Long id) {
         return reservationService.getReservationById(id);
     }
+    
+    @PatchMapping("/{id}/check-in")
+    @Operation(summary = "Xử lý nhận phòng (Check-in)")
+    public ReservationResponseDTO checkIn(@PathVariable Long id) {
+        return reservationService.checkIn(id);
+    }
+
+    @PatchMapping("/{id}/check-out")
+    @Operation(summary = "Xử lý trả phòng (Check-out)")
+    public ReservationResponseDTO checkOut(@PathVariable Long id) {
+        return reservationService.checkOut(id);
+    }
 }

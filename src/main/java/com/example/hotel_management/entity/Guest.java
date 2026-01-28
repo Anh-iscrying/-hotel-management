@@ -33,4 +33,6 @@ public class Guest {
     private LocalDate birthDate; 
 
     private Integer loyaltyPoints = 0;
+    
+    private boolean isDeleted = false; // Mặc định là chưa xóa
 }

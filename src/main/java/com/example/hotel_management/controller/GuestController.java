@@ -25,4 +25,10 @@ public class GuestController {
     public GuestDTO create(@RequestBody GuestDTO guestDTO) {
         return guestService.createGuest(guestDTO);
     }
+    
+    @DeleteMapping("/{id}")
+    public String delete(@PathVariable Long id) {
+        guestService.deleteGuest(id);
+        return "Đã xóa khách hàng thành công (Soft Delete)!";
+    }
 }
