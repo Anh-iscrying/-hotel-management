@@ -39,6 +39,12 @@ public class ReservationService {
         // 1. Tìm Khách và Phòng
         Guest guest = guestRepository.findById(request.getGuestId())
                 .orElseThrow(() -> new RuntimeException("Không tìm thấy khách hàng ID: " + request.getGuestId()));
+            if (guest.getBirthDate() != null) {
+                int age = java.time.Period.between(guest.getBirthDate(), java.time.LocalDate.now()).getYears();
+                if (age < 18) {
+                    throw new RuntimeException("Khách hàng " + guest.getFirstName() + " mới " + age + " tuổi, không đủ điều kiện đặt phòng (Yêu cầu >= 18)!");
+                }
+            }
         Room room = roomRepository.findById(request.getRoomId())
                 .orElseThrow(() -> new RuntimeException("Không tìm thấy phòng ID: " + request.getRoomId()));
 

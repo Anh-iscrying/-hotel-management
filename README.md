@@ -54,8 +54,13 @@ mvn spring-boot:run
 ```
 
 ## 📖 Tài liệu API (Swagger UI)
-Hệ thống tự động tạo tài liệu API dựa trên Swagger. Sau khi server khởi động (mặc định port 8080), bạn có thể truy cập tại:
+1. Swagger UI (Dành cho trình duyệt)
+Sau khi server khởi động (mặc định port 8080), bạn có thể truy cập tại:
 👉 URL: http://localhost:8080/swagger-ui/index.html
+2. Postman Collection (Dành cho kiểm thử chuyên sâu)
+Nhóm đã chuẩn bị sẵn tệp cấu hình API để test nhanh.
+Vị trí tệp: docs/hotel-management-api.json
+Cách dùng: Mở Postman -> Chọn Import -> Chọn tệp trên.
 
 ## ⚖️ Các Business Rules quan trọng (Critical Rules)
 Dự án cài đặt các quy tắc nghiệp vụ theo yêu cầu tại Slide 9 & 11:
